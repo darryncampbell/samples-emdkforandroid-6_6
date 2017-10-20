@@ -515,6 +515,16 @@ public class MainActivity extends Activity implements EMDKListener, DataListener
 
                 ScannerConfig config = scanner.getConfig();
 
+                config.decoderParams.i2of5.enabled = true;
+                config.decoderParams.i2of5.convertToEan13 = false;
+                config.decoderParams.i2of5.length1 = 14;
+                config.decoderParams.i2of5.length2 = 10;
+                config.decoderParams.i2of5.reducedQuietZone = false;
+                config.decoderParams.i2of5.redundancy = true;
+                config.decoderParams.i2of5.reportCheckDigit = false;
+                config.decoderParams.i2of5.verifyCheckDigit = ScannerConfig.CheckDigitType.NO;
+                config.decoderParams.i2of5.securityLevel = ScannerConfig.SecurityLevel.LEVEL_1;
+
                 // Set EAN8
                 if(checkBoxEAN8.isChecked())
                     config.decoderParams.ean8.enabled = true;
