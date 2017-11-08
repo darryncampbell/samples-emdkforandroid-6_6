@@ -399,7 +399,7 @@ class MainActivity : Activity(), EMDKListener, DataListener, StatusListener, Sca
 
     private fun addCheckBoxListener() {
 
-        checkBoxContinuous!!.setOnCheckedChangeListener { buttonView, isChecked ->
+        checkBoxContinuous!!.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 bContinuousMode = true
             } else {
